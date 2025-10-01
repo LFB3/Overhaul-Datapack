@@ -1,16 +1,15 @@
 {
-  "display": {
-    "icon": {
-      "id": "minecraft:grass_block"
-    },
-    "title": "Wilkommen!",
-    "description": "Willkommen auf dem Minecraft Server!",
-    "background": "minecraft:block/dirt",
-    "frame": "challenge"
-  },
-  "criteria": {
-    "trigger": {
-      "trigger": "minecraft:tick"
+  "type": "minecraft:gift",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:wooden_axe",
+          "weight": 1
+        }
+      ]
     }
-  }
+  ]
 }

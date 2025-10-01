@@ -3,82 +3,31 @@
     "icon": {
       "id": "minecraft:oak_log"
     },
-    "title": "Jeder Anfang ist klein",
-    "description": "Bekomme dein erstes Holz",
+    "title": "Jeder anfang ist gleich",
+    "description": "Bekomme etwas Holz",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "overhaul:anfang",
+  "parent": "overhaul:anfang/root",
   "criteria": {
-    "get_wood": {
-      "trigger": "minecraft:item_used_on_block",
+    "log": {
+      "trigger": "minecraft:inventory_changed",
       "conditions": {
-        "item": {
-          "items": [
-            "minecraft:wooden_axe",
-            "minecraft:stone_axe",
-            "minecraft:iron_axe",
-            "minecraft:golden_axe",
-            "minecraft:diamond_axe",
-            "minecraft:netherite_axe"
-          ]
-        },
-        "location": [
+        "items": [
           {
-            "block": "minecraft:oak_log"
-          },
-          {
-            "block": "minecraft:birch_log"
-          },
-          {
-            "block": "minecraft:spruce_log"
-          },
-          {
-            "block": "minecraft:jungle_log"
-          },
-          {
-            "block": "minecraft:acacia_log"
-          },
-          {
-            "block": "minecraft:dark_oak_log"
-          },
-          {
-            "block": "minecraft:mangrove_log"
-          },
-          {
-            "block": "minecraft:cherry_log"
-          },
-          {
-            "block": "minecraft:bamboo_block"
-          },
-          {
-            "block": "minecraft:stripped_oak_log"
-          },
-          {
-            "block": "minecraft:stripped_birch_log"
-          },
-          {
-            "block": "minecraft:stripped_spruce_log"
-          },
-          {
-            "block": "minecraft:stripped_jungle_log"
-          },
-          {
-            "block": "minecraft:stripped_acacia_log"
-          },
-          {
-            "block": "minecraft:stripped_dark_oak_log"
-          },
-          {
-            "block": "minecraft:stripped_mangrove_log"
-          },
-          {
-            "block": "minecraft:stripped_cherry_log"
-          },
-          {
-            "block": "minecraft:stripped_bamboo_block"
+            "items": [
+              "minecraft:oak_log",
+              "minecraft:spruce_log",
+              "minecraft:birch_log",
+              "minecraft:jungle_log",
+              "minecraft:acacia_log",
+              "minecraft:dark_oak_log",
+              "minecraft:mangrove_log",
+              "minecraft:cherry_log",
+              "minecraft:pale_oak_log"
+            ]
           }
         ]
       }
@@ -86,7 +35,13 @@
   },
   "requirements": [
     [
-      "get_wood"
+      "log"
     ]
-  ]
+  ],
+  "rewards": {
+    "loot": [
+      "overhaul:wooden_axe"
+    ],
+    "experience": 10
+  }
 }
