@@ -1,23 +1,22 @@
 {
   "display": {
     "icon": {
-      "id": "minecraft:oak_log"
+      "id": "minecraft:oak_planks"
     },
-    "title": "Jeder anfang ist gleich",
-    "description": "Bekomme etwas Holz",
-    "frame": "task",
+    "title": "Am Anfang ist der Chat voll",
+    "description": "Advancements, Advancements, Advancements...",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false
   },
-  "parent": "overhaul:anfang/root",
+  "parent": "overhaul:anfang/holz",
   "criteria": {
-    "log": {
+    "planks": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": "#minecraft:logs_that_burn"
+            "items": "#minecraft:planks"
           }
         ]
       }
@@ -25,13 +24,10 @@
   },
   "requirements": [
     [
-      "log"
+      "planks"
     ]
   ],
   "rewards": {
-    "loot": [
-      "overhaul:wooden_axe"
-    ],
     "experience": 10
   }
 }
